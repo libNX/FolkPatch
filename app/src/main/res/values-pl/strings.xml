@@ -178,7 +178,7 @@
     <string name="su_pkg_root_setting_title">Superużytkownik</string>
     <string name="su_pkg_root_setting_summary">Włączenie tej opcji przyzna dostęp superużytkownika Twojej aplikacji, pozwalając na używanie poleceń SU</string>
     <string name="su_pkg_normal_setting_title">Tryb normalny</string>
-    <string name="su_pkg_normal_setting_summary">Stan domyślny, bez specjalnej obsługi.</string>
+    <string name="su_pkg_normal_setting_summary">Brak dostępu root, aplikacja działa bez uprawnień superużytkownika.</string>
     <string name="su_batch_exclude_title">Masowe wykluczanie</string>
     <string name="su_batch_exclude_content">Wyklucz wstrzykiwanie dla wszystkich aplikacji bez roota, wybierz działanie</string>
     <string name="su_exclude_btn">Wyklucz</string>
@@ -266,8 +266,6 @@
     <string name="settings_apm_install_confirm_summary">Pokaż okno dialogowe potwierdzenia przed instalacją modułów</string>
     <string name="settings_enable_module_shortcut_add">Włącz przycisk dodawania skrótu</string>
     <string name="settings_enable_module_shortcut_add_summary">Pokaż przycisk dodawania skrótu WebUI na stronie modułów systemowych</string>
-    <string name="settings_show_disable_all_modules">Pokaż przycisk \'Wyłącz wszystkie moduły\'</string>
-    <string name="settings_show_disable_all_modules_summary">Wyświetl przycisk na stronie modułów, aby wyłączyć wszystkie moduły naraz</string>
     <string name="settings_module_sort_optimization">Optymalizacja sortowania modułów</string>
     <string name="settings_module_sort_optimization_summary">Umieść moduły systemowe z WebUI i Action na początku listy</string>
     <string name="settings_fold_system_module">Zwiń Moduły Systemowe</string>
@@ -280,7 +278,7 @@
     <string name="apm_install_confirm_content">Czy na pewno chcesz zainstalować %s?</string>
 
     <string name="apm_disable_all_title">Wyłącz wszystkie moduły</string>
-    <string name="apm_disable_all_confirm">Czy na pewno chcesz wyłączyć wszystkie moduły? Zazwyczaj robi się to przed aktualizacją OTA.</string>
+    <string name="apm_disable_all_confirm">Czy na pewno chcesz wyłączyć wszystkie moduły? Spowoduje to wyłączenie wszystkich zainstalowanych modułów.</string>
     <string name="apm_enable_module_banner">Włącz baner modułu</string>
     <string name="apm_enable_module_banner_summary">Wyświetl obraz banera dla modułów jeśli jest dostępny</string>
     <string name="apm_enable_folk_banner">Dostosuj baner modułu</string>
@@ -392,7 +390,7 @@ Oto kilka możliwych przyczyn niepowodzenia uwierzytelnienia—proszę sprawdzi�
     <string name="teal_theme">Błękitny</string>
     <string name="yellow_theme">Żółty</string>
 
-    <string name="about_app_desc">Rozwiązanie root oparte na jądrze, które obsługuje moduły jądra i haki funkcji jądra bez ponownej kompilacji jądra.</string>
+    <string name="about_app_desc">Implementacja Root oparta na KernelPatch, pozwalająca na hookowanie funkcji jądra bez ponownej kompilacji jądra.</string>
     <string name="about_powered_by">Napędzane przez %1$s</string>
     <string name="about_telegram_group">Grupa Telegram</string>
     
@@ -540,7 +538,7 @@ Upewnij się, że aplikacja jest całkowicie zamknięta i ponownie otwarta, aby 
     <string name="apm_bulk_install_first_use_text">Ta funkcja pozwala na zainstalowanie wielu modułów naraz. Jest to szybka metoda instalacji, odpowiednia dla modułów, które podczas instalacji nie wymagają operacji na klawiszach. Dla modułów wymagających interakcji z klawiszami głośności, proszę włącz tryb pełnej instalacji w ustawieniach.</string>
     <string name="apm_bulk_install_remove">Usuń</string>
     <string name="apm_first_use_title">Witaj w modułach systemowych</string>
-    <string name="apm_first_use_text">Witaj w modułach systemowych, tutaj używane są moduły kompatybilne z ekosystemem Magisk. W przyszłości może zostać dodane wsparcie dla modułów Lua. Kliknij przycisk w prawym dolnym rogu, aby zainstalować moduły. Możesz również użyć instalatora na górze, aby zainstalować moduły hurtowo. Dostępna jest również funkcja tworzenia kopii zapasowej wszystkich modułów jednym kliknięciem, ale pamiętaj, że to rozwiązanie może nie być odpowiednie dla wszystkich modułów, więc warto robić własne kopie zapasowe.</string>
+    <string name="apm_first_use_text">Witaj w modułach systemowych, tutaj używane są moduły kompatybilne z ekosystemem Magisk. Kliknij przycisk w prawym dolnym rogu, aby zainstalować moduły. Możesz również użyć instalatora na górze, aby zainstalować moduły hurtowo. Dostępna jest również funkcja tworzenia kopii zapasowej wszystkich modułów jednym kliknięciem, ale pamiętaj, że to rozwiązanie może nie być odpowiednie dla wszystkich modułów, więc warto robić własne kopie zapasowe.</string>
 
     <!-- Hide Settings Strings -->
     <string name="home_hide_su_path">Ukryj ścieżkę pliku wykonywalnego su</string>
@@ -677,7 +675,20 @@ Upewnij się, że aplikacja jest całkowicie zamknięta i ponownie otwarta, aby 
     <!--Opcje zwijania-->
     <string name="settings_category_general">Ogólne</string>
     <string name="settings_category_appearance">Wygląd</string>
+    <string name="settings_appearance_font">Czcionka</string>
+    <string name="settings_appearance_font_summary">Konfiguracja czcionki</string>
+    <string name="settings_appearance_theme">Motyw</string>
+    <string name="settings_appearance_theme_summary">Sklep z motywami, zapisywanie, importowanie i resetowanie</string>
+    <string name="settings_appearance_banner">Baner</string>
+    <string name="settings_appearance_banner_summary">Konfiguracja banera modułu</string>
+    <string name="settings_appearance_layout">Układ</string>
+    <string name="settings_appearance_layout_summary">Układ strony głównej, nawigacja i dostosowanie kart</string>
+    <string name="settings_appearance_background">Tło</string>
+    <string name="settings_appearance_background_summary">Niestandardowe tło, wideo i wiele teł</string>
+    <string name="settings_appearance_night_mode">Tryb nocny</string>
+    <string name="settings_appearance_night_mode_summary">Ciemny motyw i konfiguracja kolorów</string>
     <string name="settings_category_behavior">Zachowanie</string>
+    <string name="settings_category_function">Funkcje</string>
     <string name="settings_use_legacy_su_page">Autoryzacja superużytkownika jednostronicowa</string>
     <string name="settings_use_legacy_su_page_summary">Strona superużytkownika przełączona na projekt autoryzacji jednostronicowej</string>
     <string name="settings_category_module">Moduły</string>
@@ -888,4 +899,35 @@ Upewnij się, że aplikacja jest całkowicie zamknięta i ponownie otwarta, aby 
     <string name="umount_config_save_confirm">Potwierdzić zapisanie konfiguracji?</string>
     <string name="umount_config_save_success">Konfiguracja zapisana pomyślnie</string>
     <string name="umount_config_save_failed">Nie udało się zapisać konfiguracji</string>
+
+    <!-- Strona Moje Motywy -->
+    <string name="my_themes_title">Moje motywy</string>
+    <string name="my_themes_empty">Brak motywów</string>
+    <string name="my_themes_empty_action">Przeglądaj Sklep z Motywami</string>
+    <string name="my_themes_apply">Zastosuj motyw</string>
+    <string name="my_themes_delete">Usuń motyw</string>
+    <string name="my_themes_delete_confirm">Czy na pewno chcesz usunąć ten motyw?</string>
+    <string name="my_themes_deleted">Usunięto motyw</string>
+    <string name="my_themes_applied">Zastosowano motyw</string>
+    <string name="my_themes_apply_failed">Nie udało się zastosować motywu</string>
+    <string name="my_themes_details">Szczegóły motywu</string>
+
+    <!-- Dialog Pobierania -->
+    <string name="theme_download_title">Pobieranie motywu</string>
+    <string name="theme_download_completed">Pobieranie zakończone</string>
+    <string name="theme_download_failed">Pobieranie nieudane</string>
+    <string name="theme_download_progress">Postęp</string>
+    <string name="theme_download_file">Plik motywu</string>
+    <string name="theme_download_image">Obraz podglądu</string>
+    <string name="theme_download_cancel">Anuluj</string>
+    <string name="theme_download_pause">Wstrzymaj</string>
+    <string name="theme_download_resume">Wznów</string>
+    <string name="theme_download_retry">Ponów</string>
+    <string name="theme_download_apply">Zastosuj motyw</string>
+    <string name="theme_download_go_to_my_themes">Moje motywy</string>
+    <string name="theme_download_retrying">Ponawianie (%d/3)...</string>
+    <string name="theme_download_preparing">Przygotowywanie pobierania...</string>
+    <string name="theme_download_downloading_file">Pobieranie pliku motywu...</string>
+    <string name="theme_download_downloading_image">Pobieranie obrazu podglądu...</string>
+    <string name="theme_download_finalizing">Finalizowanie...</string>
 </resources>

@@ -179,7 +179,7 @@
     <string name="su_pkg_root_setting_title">Суперпользователь</string>
     <string name="su_pkg_root_setting_summary">Включение этой опции предоставит доступ суперпользователя вашему приложению, позволяя использовать команды SU.</string>
     <string name="su_pkg_normal_setting_title">Обычный режим</string>
-    <string name="su_pkg_normal_setting_summary">Состояние по умолчанию, без специальной обработки.</string>
+    <string name="su_pkg_normal_setting_summary">Доступ root не предоставлен, приложение работает без привилегий суперпользователя.</string>
     <string name="su_batch_exclude_title">Пакетное исключение</string>
     <string name="su_batch_exclude_content">Исключить инъекцию для всех не-ROOT приложений, выберите действие</string>
     <string name="su_exclude_btn">Исключить</string>
@@ -267,8 +267,6 @@
     <string name="settings_apm_install_confirm_summary">Показывать диалог подтверждения перед установкой модулей</string>
     <string name="settings_enable_module_shortcut_add">Включить кнопку добавления ярлыка</string>
     <string name="settings_enable_module_shortcut_add_summary">Показать кнопку добавления ярлыка WebUI на странице системных модулей</string>
-    <string name="settings_show_disable_all_modules">Показать кнопку "Отключить все модули"</string>
-    <string name="settings_show_disable_all_modules_summary">Отображать кнопку на странице модулей для отключения всех модулей одновременно</string>
     <string name="settings_module_sort_optimization">Оптимизация сортировки модулей</string>
     <string name="settings_module_sort_optimization_summary">Разместить системные модули с WebUI и Action в начале списка</string>
     <string name="settings_fold_system_module">Свернуть системные модули</string>
@@ -280,7 +278,7 @@
     <string name="apm_install_confirm_title">Установить модуль</string>
     <string name="apm_install_confirm_content">Вы уверены, что хотите установить %s?</string>
     <string name="apm_disable_all_title">Отключить все модули</string>
-    <string name="apm_disable_all_confirm">Вы уверены, что хотите отключить все модули? Обычно это делается перед обновлением OTA.</string>
+    <string name="apm_disable_all_confirm">Вы уверены, что хотите отключить все модули? Это приведёт к отключению всех установленных модулей.</string>
     <string name="apm_enable_module_banner">Включить баннер модуля</string>
     <string name="apm_enable_module_banner_summary">Отображать изображение баннера для модулей если доступно</string>
     <string name="apm_enable_folk_banner">Настроить баннер модуля</string>
@@ -392,7 +390,7 @@
     <string name="teal_theme">Бирюзовая</string>
     <string name="yellow_theme">Жёлтая</string>
 
-    <string name="about_app_desc">Решение для получения root-прав на уровне ядра, поддерживающее модули ядра и перехватчики функций ядра без перекомпиляции ядра.</string>
+    <string name="about_app_desc">Реализация Root на основе KernelPatch, позволяющая перехватывать функции ядра без перекомпиляции ядра.</string>
     <string name="about_powered_by">Работает на %1$s</string>
     <string name="about_telegram_group">Группа в Telegram</string>
     
@@ -541,7 +539,7 @@
     <string name="apm_bulk_install_first_use_text">Эта функция позволяет устанавливать несколько модулей одновременно. Это быстрый метод установки, подходящий для модулей, которые не требуют операций с кнопками во время установки. Для модулей, требующих взаимодействия с кнопками громкости, пожалуйста, включите режим полной установки в настройках.</string>
     <string name="apm_bulk_install_remove">Удалить</string>
     <string name="apm_first_use_title">Добро пожаловать в системные модули</string>
-    <string name="apm_first_use_text">Добро пожаловать в системные модули, здесь используются модули, совместимые с экосистемой Magisk. В будущем может быть добавлена поддержка модулей Lua. Нажмите кнопку в правом нижнем углу, чтобы установить модули. Вы также можете использовать установщик вверху для массовой установки модулей. Также предоставляется функция резервного копирования всех модулей одним нажатием, но обратите внимание, что это решение может не подходить для всех модулей, поэтому делайте свои резервные копии.</string>
+    <string name="apm_first_use_text">Добро пожаловать в системные модули, здесь используются модули, совместимые с экосистемой Magisk. Нажмите кнопку в правом нижнем углу, чтобы установить модули. Вы также можете использовать установщик вверху для массовой установки модулей. Также предоставляется функция резервного копирования всех модулей одним нажатием, но обратите внимание, что это решение может не подходить для всех модулей, поэтому делайте свои резервные копии.</string>
 
     <!-- Hide Settings Strings -->
     <string name="home_hide_su_path">Скрыть путь исполняемого файла su</string>
@@ -677,7 +675,20 @@
     <string name="superuser">Суперпользователь</string>
     <string name="module">Модули</string>
     <string name="settings_category_appearance">Внешний вид</string>
+    <string name="settings_appearance_font">Настройки шрифта</string>
+    <string name="settings_appearance_font_summary">Настройка пользовательского шрифта</string>
+    <string name="settings_appearance_theme">Настройки темы</string>
+    <string name="settings_appearance_theme_summary">Магазин тем, сохранение, импорт и сброс</string>
+    <string name="settings_appearance_banner">Настройки баннера</string>
+    <string name="settings_appearance_banner_summary">Настройка баннера модуля</string>
+    <string name="settings_appearance_layout">Настройки макета</string>
+    <string name="settings_appearance_layout_summary">Макет главной страницы, навигация и настройка карточек</string>
+    <string name="settings_appearance_background">Настройки фона</string>
+    <string name="settings_appearance_background_summary">Пользовательский фон, видео и многофоновый режим</string>
+    <string name="settings_appearance_night_mode">Настройки ночного режима</string>
+    <string name="settings_appearance_night_mode_summary">Темная тема и настройка цветов</string>
     <string name="settings_category_behavior">Поведение</string>
+    <string name="settings_category_function">Функция</string>
     <string name="settings_use_legacy_su_page">Авторизация суперпользователя на одной странице</string>
     <string name="settings_use_legacy_su_page_summary">Страница суперпользователя переключена на одностраничный дизайн авторизации</string>
     <string name="settings_category_module">Модули</string>
@@ -886,4 +897,35 @@
     <string name="umount_config_save_confirm">Подтвердить сохранение конфигурации?</string>
     <string name="umount_config_save_success">Конфигурация успешно сохранена</string>
     <string name="umount_config_save_failed">Не удалось сохранить конфигурацию</string>
+
+    <!-- Страница Мои Темы -->
+    <string name="my_themes_title">Мои темы</string>
+    <string name="my_themes_empty">Тем пока нет</string>
+    <string name="my_themes_empty_action">Посетить магазин тем</string>
+    <string name="my_themes_apply">Применить тему</string>
+    <string name="my_themes_delete">Удалить тему</string>
+    <string name="my_themes_delete_confirm">Вы уверены, что хотите удалить эту тему?</string>
+    <string name="my_themes_deleted">Тема удалена</string>
+    <string name="my_themes_applied">Тема применена</string>
+    <string name="my_themes_apply_failed">Не удалось применить тему</string>
+    <string name="my_themes_details">Детали темы</string>
+
+    <!-- Диалог Загрузки -->
+    <string name="theme_download_title">Загрузка темы</string>
+    <string name="theme_download_completed">Загрузка завершена</string>
+    <string name="theme_download_failed">Ошибка загрузки</string>
+    <string name="theme_download_progress">Прогресс</string>
+    <string name="theme_download_file">Файл темы</string>
+    <string name="theme_download_image">Изображение предпросмотра</string>
+    <string name="theme_download_cancel">Отмена</string>
+    <string name="theme_download_pause">Пауза</string>
+    <string name="theme_download_resume">Продолжить</string>
+    <string name="theme_download_retry">Повторить</string>
+    <string name="theme_download_apply">Применить тему</string>
+    <string name="theme_download_go_to_my_themes">Мои темы</string>
+    <string name="theme_download_retrying">Повтор (%d/3)...</string>
+    <string name="theme_download_preparing">Подготовка загрузки...</string>
+    <string name="theme_download_downloading_file">Загрузка файла темы...</string>
+    <string name="theme_download_downloading_image">Загрузка изображения предпросмотра...</string>
+    <string name="theme_download_finalizing">Завершение...</string>
 </resources>

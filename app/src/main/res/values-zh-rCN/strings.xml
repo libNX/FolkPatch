@@ -192,8 +192,8 @@
     <string name="su_pkg_excluded_setting_summary">启用此选项将允许 FolkPatch 恢复此应用模块修改的任何文件。</string>
     <string name="su_pkg_root_setting_title">超级用户</string>
     <string name="su_pkg_root_setting_summary">启用该选项为你的软件启动超级用户,软件能够使用SU命令</string>
-    <string name="su_pkg_normal_setting_title">普通模式</string>
-    <string name="su_pkg_normal_setting_summary">默认状态，不做任何特殊处理。</string>
+    <string name="su_pkg_normal_setting_title">常规模式</string>
+    <string name="su_pkg_normal_setting_summary">不授予 root 权限，应用在没有超级用户权限下运行。</string>
     <string name="su_show_system_apps">显示系统应用</string>
     <string name="su_hide_system_apps">隐藏系统应用</string>
     <string name="su_refresh">刷新</string>
@@ -253,9 +253,7 @@
     <string name="settings_apm_stay_on_page">留在操作页面</string>
     <string name="settings_apm_stay_on_page_summary">系统模块执行完操作后不自动返回</string>
     <string name="settings_enable_module_shortcut_add">启用快捷添加按钮</string>
-    <string name="settings_enable_module_shortcut_add_summary">显示WebUI快捷方式添加按钮</string>
-    <string name="settings_show_disable_all_modules">显示"禁用全部模块"按钮</string>
-    <string name="settings_show_disable_all_modules_summary">在模块页面显示一键禁用所有模块的按钮</string>
+    <string name="settings_enable_module_shortcut_add_summary">显示 WebUI 快捷方式添加按钮</string>
     <string name="settings_disable_module_update_check">禁用模块更新检查</string>
     <string name="settings_disable_module_update_check_summary">禁用系统模块的自动更新检查</string>
     <string name="settings_module_sort_optimization">模块排序优化</string>
@@ -274,7 +272,7 @@
     <string name="apm_install_confirm_title">安装模块</string>
     <string name="apm_install_confirm_content">确定要安装 %s 吗？</string>
     <string name="apm_disable_all_title">禁用所有模块</string>
-    <string name="apm_disable_all_confirm">确定禁用全部模块吗？一般来说在 OTA 更新前才这么做。</string>
+    <string name="apm_disable_all_confirm">确定禁用全部模块吗？此操作将停用所有已安装的模块</string>
     <string name="apm_enable_module_banner">启用模块横幅</string>
     <string name="apm_enable_module_banner_summary">为支持的模块显示横幅图片</string>
     <string name="apm_enable_folk_banner">自定义模块横幅</string>
@@ -384,7 +382,7 @@
     <string name="yellow_theme">黄色</string>
     <string name="ink_wash_theme">水墨风</string>
 
-    <string name="about_app_desc">一个基于内核的 Root 解决方案，支持内核模块和内核函数 hook，无需重新编译内核。</string>
+    <string name="about_app_desc">基于 KernelPatch 的 Root 实现，无需重新编译内核的同时，允许 Hook 内核函数。</string>
     <string name="about_powered_by">由 %1$s 提供支持</string>
     <string name="about_telegram_group">Telegram 群组</string>
     
@@ -539,7 +537,7 @@
     <string name="apm_bulk_install_first_use_text">这个功能允许你一次性刷入多个模块,属于快速刷入,适合刷一些过程中没有涉及按键操作的模块,涉及点按音量键等操作的请去设置启用完整流程刷入模式</string>
     <string name="apm_bulk_install_remove">移除</string>
     <string name="apm_first_use_title">欢迎使用系统模块</string>
-    <string name="apm_first_use_text">欢迎使用系统模块，这里使用的是兼容Magisk生态的模块，未来可能会加入对Lua模块的支持，点击右下角的按钮可以安装模块，你也可以使用顶部的安装器批量安装模块，还提供了一个功能一键备份全部模块，但是注意这种方案不一定适用全部模块，还是自己多加备份</string>
+    <string name="apm_first_use_text">欢迎使用系统模块，这里使用的是兼容Magisk生态的模块，点击右下角的按钮可以安装模块，你也可以使用顶部的安装器批量安装模块，还提供了一个功能一键备份全部模块，但是注意这种方案不一定适用全部模块，还是自己多加备份</string>
     <string name="kpm_autoload_add_kpm">添加KPM</string>
     <string name="kpm_autoload_remove_kpm">删除</string>
     <string name="kpm_autoload_kpm_list_title">KPM模块列表</string>
@@ -675,11 +673,26 @@
     <string name="module">模块</string>
     <string name="settings_category_appearance">外观</string>
     <string name="settings_category_behavior">行为</string>
+    
+    <!-- Appearance Sub-Categories -->
+    <string name="settings_appearance_font">字体设置</string>
+    <string name="settings_appearance_font_summary">自定义字体配置</string>
+    <string name="settings_appearance_theme">主题设置</string>
+    <string name="settings_appearance_theme_summary">主题商店、保存、导入和重置</string>
+    <string name="settings_appearance_banner">横幅设置</string>
+    <string name="settings_appearance_banner_summary">模块横幅配置</string>
+    <string name="settings_appearance_layout">布局设置</string>
+    <string name="settings_appearance_layout_summary">首页布局、导航和卡片自定义</string>
+    <string name="settings_appearance_background">背景设置</string>
+    <string name="settings_appearance_background_summary">自定义背景、视频和多背景</string>
+    <string name="settings_appearance_night_mode">夜间模式设置</string>
+    <string name="settings_appearance_night_mode_summary">深色主题和颜色配置</string>
     <string name="settings_use_legacy_su_page">单页超级用户授权</string>
     <string name="settings_use_legacy_su_page_summary">超级用户页面改用单页授权设计</string>
     <string name="settings_category_module">模块</string>
     <string name="settings_category_security">安全</string>
-    
+    <string name="settings_category_function">功能</string>
+
     <!-- 背景音乐字符串 -->
     <string name="settings_background_music">背景音乐</string>
     <string name="settings_background_music_summary">应用在前台时播放背景音乐</string>
@@ -709,6 +722,37 @@
     <string name="theme_store_filter_type">设备类型</string>
     <string name="theme_store_filter_apply">应用</string>
     <string name="theme_store_filter_reset">重置</string>
+
+    <!-- My Themes Page -->
+    <string name="my_themes_title">我的主题</string>
+    <string name="my_themes_empty">暂无主题</string>
+    <string name="my_themes_empty_action">去逛逛</string>
+    <string name="my_themes_apply">应用主题</string>
+    <string name="my_themes_delete">删除主题</string>
+    <string name="my_themes_delete_confirm">确定要删除此主题吗？</string>
+    <string name="my_themes_deleted">主题已删除</string>
+    <string name="my_themes_applied">主题已应用</string>
+    <string name="my_themes_apply_failed">应用主题失败</string>
+    <string name="my_themes_details">主题详情</string>
+
+    <!-- Download Dialog -->
+    <string name="theme_download_title">正在下载主题</string>
+    <string name="theme_download_completed">下载完成</string>
+    <string name="theme_download_failed">下载失败</string>
+    <string name="theme_download_progress">进度</string>
+    <string name="theme_download_file">主题文件</string>
+    <string name="theme_download_image">预览图片</string>
+    <string name="theme_download_cancel">取消</string>
+    <string name="theme_download_pause">暂停</string>
+    <string name="theme_download_resume">继续</string>
+    <string name="theme_download_retry">重试</string>
+    <string name="theme_download_apply">应用主题</string>
+    <string name="theme_download_go_to_my_themes">我的主题</string>
+    <string name="theme_download_retrying">正在重试 (%d/3)...</string>
+    <string name="theme_download_preparing">准备下载...</string>
+    <string name="theme_download_downloading_file">正在下载主题文件...</string>
+    <string name="theme_download_downloading_image">正在下载预览图片...</string>
+    <string name="theme_download_finalizing">正在完成...</string>
 
     <!-- File Picker -->
     <string name="file_picker_permission_required">需要权限</string>

@@ -179,7 +179,7 @@
     <string name="su_pkg_root_setting_title">Superuser</string>
     <string name="su_pkg_root_setting_summary">Mengaktifkan opsi ini untuk memberikan akses superuser ke aplikasi Anda, aplikasi dapat menggunakan perintah SU</string>
     <string name="su_pkg_normal_setting_title">Mode Normal</string>
-    <string name="su_pkg_normal_setting_summary">Status default, tidak ada penanganan khusus.</string>
+    <string name="su_pkg_normal_setting_summary">Tidak ada akses root yang diberikan, aplikasi berjalan tanpa hak istimewa superuser.</string>
     <string name="su_batch_exclude_title">Pengecualian Massal</string>
     <string name="su_batch_exclude_content">Kecualikan injeksi untuk semua aplikasi non-Root, pilih tindakan</string>
     <string name="su_exclude_btn">Kecualikan</string>
@@ -267,8 +267,6 @@
     <string name="settings_apm_install_confirm_summary">Tampilkan dialog konfirmasi sebelum menginstal modul</string>
     <string name="settings_enable_module_shortcut_add">Aktifkan tombol tambah pintasan</string>
     <string name="settings_enable_module_shortcut_add_summary">Tampilkan tombol tambah pintasan WebUI di halaman modul sistem</string>
-    <string name="settings_show_disable_all_modules">Tampilkan tombol "Nonaktifkan semua modul"</string>
-    <string name="settings_show_disable_all_modules_summary">Tampilkan tombol di halaman modul untuk menonaktifkan semua modul secara bersamaan</string>
     <string name="settings_module_sort_optimization">Optimasi Pengurutan Modul</string>
     <string name="settings_module_sort_optimization_summary">Jadikan modul sistem dengan WebUI dan Action muncul di bagian atas</string>
     <string name="settings_fold_system_module">Lipat Modul Sistem</string>
@@ -280,7 +278,7 @@
     <string name="apm_install_confirm_title">Instal modul</string>
     <string name="apm_install_confirm_content">Apakah Anda yakin ingin tetap menginstal %s?</string>
     <string name="apm_disable_all_title">Nonaktifkan semua modul</string>
-    <string name="apm_disable_all_confirm">Apakah Anda yakin ingin menonaktifkan semua modul? Ini biasanya dilakukan sebelum pembaruan OTA.</string>
+    <string name="apm_disable_all_confirm">Apakah Anda yakin ingin menonaktifkan semua modul? Ini akan menonaktifkan semua modul yang terinstall.</string>
     <string name="apm_enable_module_banner">Aktifkan banner modul</string>
     <string name="apm_enable_module_banner_summary">Tampilkan gambar banner untuk modul jika tersedia</string>
     <string name="apm_enable_folk_banner">Kustomisasi banner modul</string>
@@ -391,7 +389,7 @@ Berikut adalah beberapa kemungkinan penyebab kegagalan autentikasi—silakan cek
     <string name="teal_theme">Hijau Kebiru-biruan</string>
     <string name="yellow_theme">Kuning</string>
 
-    <string name="about_app_desc">Solusi *root* tingkat kernel yang mendukung modul kernel dan *hook* fungsi kernel tanpa kompilasi ulang kernel.</string>
+    <string name="about_app_desc">Implementasi Root berbasis KernelPatch, memungkinkan *hook* fungsi kernel tanpa kompilasi ulang kernel.</string>
     <string name="about_powered_by">Didukung oleh %1$s</string>
     <string name="about_telegram_group">Grup Telegram</string>
 
@@ -534,7 +532,7 @@ Pastikan aplikasi ditutup sepenuhnya dan dimulai ulang untuk menjalankan perinta
     <string name="apm_bulk_install_first_use_text">Fitur ini memungkinkan Anda menginstal beberapa modul sekaligus. Ini adalah metode instalasi cepat, cocok untuk modul yang tidak memerlukan operasi tombol selama instalasi. Untuk modul yang memerlukan interaksi tombol volume, silakan aktifkan mode instalasi proses lengkap di pengaturan.</string>
     <string name="apm_bulk_install_remove">Hapus</string>
     <string name="apm_first_use_title">Selamat datang di Modul Sistem</string>
-    <string name="apm_first_use_text">Selamat datang di Modul Sistem, yang menggunakan modul yang kompatibel dengan ekosistem Magisk. Dukungan modul Lua dapat ditambahkan di masa mendatang. Klik tombol di kanan bawah untuk menginstal modul. Anda juga dapat menggunakan penginstal di bagian atas untuk instalasi modul secara massal. Fungsi pencadangan semua modul dengan sekali klik juga disediakan, tetapi perhatikan bahwa solusi ini mungkin tidak cocok untuk semua modul, jadi buatlah cadangan Anda sendiri.</string>
+    <string name="apm_first_use_text">Selamat datang di Modul Sistem, yang menggunakan modul yang kompatibel dengan ekosistem Magisk. Klik tombol di kanan bawah untuk menginstal modul. Anda juga dapat menggunakan penginstal di bagian atas untuk instalasi modul secara massal. Fungsi pencadangan semua modul dengan sekali klik juga disediakan, tetapi perhatikan bahwa solusi ini mungkin tidak cocok untuk semua modul, jadi buatlah cadangan Anda sendiri.</string>
 
     <string name="home_hide_su_path">Sembunyikan jalur file yang dapat dieksekusi su</string>
     <string name="home_hide_kpatch_version">Sembunyikan versi patch kernel</string>
@@ -658,7 +656,20 @@ Pastikan aplikasi ditutup sepenuhnya dan dimulai ulang untuk menjalankan perinta
     <!--Opsi Lipat-->
     <string name="settings_category_general">Umum</string>
     <string name="settings_category_appearance">Tampilan</string>
+    <string name="settings_appearance_font">Pengaturan font</string>
+    <string name="settings_appearance_font_summary">Konfigurasi font kustom</string>
+    <string name="settings_appearance_theme">Pengaturan tema</string>
+    <string name="settings_appearance_theme_summary">Toko tema, simpan, impor, dan reset</string>
+    <string name="settings_appearance_banner">Pengaturan banner</string>
+    <string name="settings_appearance_banner_summary">Konfigurasi banner modul</string>
+    <string name="settings_appearance_layout">Pengaturan tata letak</string>
+    <string name="settings_appearance_layout_summary">Tata letak beranda, navigasi, dan kustomisasi kartu</string>
+    <string name="settings_appearance_background">Pengaturan latar belakang</string>
+    <string name="settings_appearance_background_summary">Latar belakang kustom, video, dan multi-latar belakang</string>
+    <string name="settings_appearance_night_mode">Pengaturan mode malam</string>
+    <string name="settings_appearance_night_mode_summary">Tema gelap dan konfigurasi warna</string>
     <string name="settings_category_behavior">Perilaku</string>
+    <string name="settings_category_function">Fungsi</string>
     <string name="settings_use_legacy_su_page">Otorisasi superuser satu halaman</string>
     <string name="settings_use_legacy_su_page_summary">Halaman superuser beralih ke desain otorisasi satu halaman</string>
     <string name="settings_category_module">Modul</string>
@@ -868,4 +879,35 @@ Pastikan aplikasi ditutup sepenuhnya dan dimulai ulang untuk menjalankan perinta
     <string name="umount_config_save_confirm">Konfirmasi simpan konfigurasi?</string>
     <string name="umount_config_save_success">Konfigurasi berhasil disimpan</string>
     <string name="umount_config_save_failed">Gagal menyimpan konfigurasi</string>
+
+    <!-- Halaman Tema Saya -->
+    <string name="my_themes_title">Tema Saya</string>
+    <string name="my_themes_empty">Belum ada tema</string>
+    <string name="my_themes_empty_action">Jelajahi Toko Tema</string>
+    <string name="my_themes_apply">Terapkan Tema</string>
+    <string name="my_themes_delete">Hapus Tema</string>
+    <string name="my_themes_delete_confirm">Apakah Anda yakin ingin menghapus tema ini?</string>
+    <string name="my_themes_deleted">Tema dihapus</string>
+    <string name="my_themes_applied">Tema diterapkan</string>
+    <string name="my_themes_apply_failed">Gagal menerapkan tema</string>
+    <string name="my_themes_details">Detail Tema</string>
+
+    <!-- Dialog Unduh -->
+    <string name="theme_download_title">Mengunduh Tema</string>
+    <string name="theme_download_completed">Unduhan selesai</string>
+    <string name="theme_download_failed">Unduhan gagal</string>
+    <string name="theme_download_progress">Progres</string>
+    <string name="theme_download_file">File Tema</string>
+    <string name="theme_download_image">Gambar Pratinjau</string>
+    <string name="theme_download_cancel">Batal</string>
+    <string name="theme_download_pause">Jeda</string>
+    <string name="theme_download_resume">Lanjutkan</string>
+    <string name="theme_download_retry">Coba Lagi</string>
+    <string name="theme_download_apply">Terapkan Tema</string>
+    <string name="theme_download_go_to_my_themes">Tema Saya</string>
+    <string name="theme_download_retrying">Mencoba Lagi (%d/3)...</string>
+    <string name="theme_download_preparing">Menyiapkan unduhan...</string>
+    <string name="theme_download_downloading_file">Mengunduh file tema...</string>
+    <string name="theme_download_downloading_image">Mengunduh gambar pratinjau...</string>
+    <string name="theme_download_finalizing">Menyelesaikan...</string>
 </resources>

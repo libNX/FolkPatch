@@ -196,7 +196,7 @@
     <string name="su_pkg_root_setting_title">Superuser</string>
     <string name="su_pkg_root_setting_summary">Bu seçenek etkinleştirildiğinde uygulamaya superuser erişimi verilir ve SU komutlarını kullanmasına izin verilir.</string>
     <string name="su_pkg_normal_setting_title">Normal Mod</string>
-    <string name="su_pkg_normal_setting_summary">Varsayılan durum, özel bir işlem yapılmaz.</string>
+    <string name="su_pkg_normal_setting_summary">Root erişimi verilmedi, uygulama superuser yetkileri olmadan çalışır.</string>
     <string name="su_show_system_apps">Sistem uygulamalarını göster</string>
     <string name="su_hide_system_apps">Sistem uygulamalarını gizle</string>
     <string name="su_refresh">Yenile</string>
@@ -259,8 +259,6 @@
     <string name="settings_apm_stay_on_page_summary">Modül işlemi tamamlandıktan sonra otomatik geri dönme</string>
     <string name="settings_enable_module_shortcut_add">Kısayol ekleme düğmesini etkinleştir</string>
     <string name="settings_enable_module_shortcut_add_summary">WebUI kısayol ekleme düğmesini göster</string>
-    <string name="settings_show_disable_all_modules">\'Tüm Modülleri Devre Dışı Bırak\' düğmesini göster</string>
-    <string name="settings_show_disable_all_modules_summary">Modüller sayfasında tüm modülleri tek seferde devre dışı bırakmak için bir düğme göster</string>
     <string name="settings_disable_module_update_check">Modül güncelleme kontrolünü devre dışı bırak</string>
     <string name="settings_disable_module_update_check_summary">Sistem modülleri için otomatik güncelleme kontrolünü kapat</string>
     <string name="settings_module_sort_optimization">Modül Sıralama Optimizasyonu</string>
@@ -279,7 +277,7 @@
     <string name="module_shortcut_type_action">Eylem</string>
     <string name="module_shortcut_icon_default">Varsayılan simgeyi kullan</string>
     <string name="module_shortcut_icon_select">Simge seç</string>
-    <string name="apm_disable_all_confirm">Tüm modülleri devre dışı bırakmak istediğinize emin misiniz? Genellikle bu işlem OTA güncellemesi öncesinde yapılır.</string>
+    <string name="apm_disable_all_confirm">Tüm modülleri devre dışı bırakmak istediğinize emin misiniz? Bu, yüklü tüm modülleri devre dışı bırakacaktır.</string>
     <string name="apm_enable_module_banner">Modül Banner’ını Etkinleştir</string>
     <string name="apm_enable_module_banner_summary">Mevcutsa modüller için banner görseli göster</string>
     <string name="apm_enable_folk_banner">Modül Banner’ını Özelleştir</string>
@@ -549,7 +547,7 @@ Bol şans! Ayrıca, aşağıdaki belge butonuna tıklamak kesinlikle doğru!</st
     <string name="apm_bulk_install_first_use_text">Bu özellik, birden fazla modülü aynı anda kurmanıza olanak tanır. Kurulum sırasında tuş etkileşimi gerektirmeyen modüller için uygun, hızlı bir kurulum yöntemidir. Ses tuşu etkileşimi gerektiren modüller için ayarlardan tam süreç kurulum modunu etkinleştirin.</string>
     <string name="apm_bulk_install_remove">Kaldır</string>
     <string name="apm_first_use_title">Sistem Modüllerine Hoş Geldiniz</string>
-    <string name="apm_first_use_text">Sistem Modüllerine hoş geldiniz. Bu bölüm, Magisk ekosistemiyle uyumlu modülleri kullanır. Gelecekte Lua modülleri için destek eklenebilir. Modül yüklemek için sağ alt köşedeki düğmeye tıklayın. Üst kısımdaki yükleyiciyi kullanarak modülleri toplu olarak da kurabilirsiniz. Tek tıkla tüm modülleri yedekleme özelliği de sunulmaktadır; ancak bu yöntemin tüm modüller için uygun olmayabileceğini unutmayın, bu yüzden kendi yedeklerinizi almanız önerilir.</string>
+    <string name="apm_first_use_text">Sistem Modüllerine hoş geldiniz. Bu bölüm, Magisk ekosistemiyle uyumlu modülleri kullanır. Modül yüklemek için sağ alt köşedeki düğmeye tıklayın. Üst kısımdaki yükleyiciyi kullanarak modülleri toplu olarak da kurabilirsiniz. Tek tıkla tüm modülleri yedekleme özelliği de sunulmaktadır; ancak bu yöntemin tüm modüller için uygun olmayabileceğini unutmayın, bu yüzden kendi yedeklerinizi almanız önerilir.</string>
 
     <string name="kpm_autoload_kpm_list_title">KPM Modülleri</string>
     <string name="kpm_autoload_no_kpm_added">Eklenmiş KPM modülü yok</string>
@@ -682,7 +680,20 @@ Komutların çalışması için uygulamanın tamamen kapatılıp yeniden açıld
     <string name="superuser">Superuser</string>
     <string name="module">Modüller</string>
     <string name="settings_category_appearance">Görünüm</string>
+    <string name="settings_appearance_font">Yazı Tipi Ayarları</string>
+    <string name="settings_appearance_font_summary">Özel yazı tipi yapılandırması</string>
+    <string name="settings_appearance_theme">Tema Ayarları</string>
+    <string name="settings_appearance_theme_summary">Tema mağazası, kaydetme, içe aktarma ve sıfırlama</string>
+    <string name="settings_appearance_banner">Banner Ayarları</string>
+    <string name="settings_appearance_banner_summary">Modül banner yapılandırması</string>
+    <string name="settings_appearance_layout">Düzen Ayarları</string>
+    <string name="settings_appearance_layout_summary">Ana sayfa düzeni, gezinme ve kart özelleştirme</string>
+    <string name="settings_appearance_background">Arka Plan Ayarları</string>
+    <string name="settings_appearance_background_summary">Özel arka plan, video ve çoklu arka plan</string>
+    <string name="settings_appearance_night_mode">Gece Modu Ayarları</string>
+    <string name="settings_appearance_night_mode_summary">Koyu tema ve renk yapılandırması</string>
     <string name="settings_category_behavior">Davranış</string>
+    <string name="settings_category_function">Fonksiyon</string>
     <string name="settings_category_module">Modüller</string>
     <string name="settings_category_security">Güvenlik</string>
     
@@ -881,4 +892,35 @@ Komutların çalışması için uygulamanın tamamen kapatılıp yeniden açıld
     <string name="umount_config_save_confirm">Yapılandırmayı kaydetmeyi onaylıyor musunuz?</string>
     <string name="umount_config_save_success">Yapılandırma başarıyla kaydedildi</string>
     <string name="umount_config_save_failed">Yapılandırma kaydedilemedi</string>
-</resources>																	 
+
+    <!-- My Themes Page -->
+    <string name="my_themes_title">Temalarım</string>
+    <string name="my_themes_empty">Henüz tema yok</string>
+    <string name="my_themes_empty_action">Tema Mağazasına Göz At</string>
+    <string name="my_themes_apply">Temayı Uygula</string>
+    <string name="my_themes_delete">Temayı Sil</string>
+    <string name="my_themes_delete_confirm">Bu temayı silmek istediğinizden emin misiniz?</string>
+    <string name="my_themes_deleted">Tema silindi</string>
+    <string name="my_themes_applied">Tema uygulandı</string>
+    <string name="my_themes_apply_failed">Tema uygulanamadı</string>
+    <string name="my_themes_details">Tema Detayları</string>
+
+    <!-- İndirme Diyaloğu -->
+    <string name="theme_download_title">Tema İndiriliyor</string>
+    <string name="theme_download_completed">İndirme tamamlandı</string>
+    <string name="theme_download_failed">İndirme başarısız</string>
+    <string name="theme_download_progress">İlerleme</string>
+    <string name="theme_download_file">Tema Dosyası</string>
+    <string name="theme_download_image">Önizleme Resmi</string>
+    <string name="theme_download_cancel">İptal</string>
+    <string name="theme_download_pause">Duraklat</string>
+    <string name="theme_download_resume">Devam Et</string>
+    <string name="theme_download_retry">Yeniden Dene</string>
+    <string name="theme_download_apply">Temayı Uygula</string>
+    <string name="theme_download_go_to_my_themes">Temalarım</string>
+    <string name="theme_download_retrying">Yeniden deneniyor (%d/3)...</string>
+    <string name="theme_download_preparing">İndirme hazırlanıyor...</string>
+    <string name="theme_download_downloading_file">Tema dosyası indiriliyor...</string>
+    <string name="theme_download_downloading_image">Önizleme resmi indiriliyor...</string>
+    <string name="theme_download_finalizing">Tamamlanıyor...</string>
+</resources>

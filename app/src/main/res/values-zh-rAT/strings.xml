@@ -186,7 +186,7 @@
     <string name="su_pkg_root_setting_title">圣光使者</string>
     <string name="su_pkg_root_setting_summary">启用此选项为你的圣光使者赋予圣光之辉，能使用圣光咒语</string>
     <string name="su_pkg_normal_setting_title">凡尘模式</string>
-    <string name="su_pkg_normal_setting_summary">凡尘状态，不给予特殊祝福。</string>
+    <string name="su_pkg_normal_setting_summary">凡尘状态，无圣光之辉，不赋予圣光使者之力。</string>
     <string name="su_show_system_apps">显示系统圣光使者</string>
     <string name="su_hide_system_apps">隐藏系统圣光使者</string>
     <string name="su_refresh">更新圣光阵</string>
@@ -261,9 +261,7 @@
     <string name="settings_apm_stay_on_page">留在圣光阵页面</string>
     <string name="settings_apm_stay_on_page_summary">星辰圣光阵执行完神力后不自动返回</string>
     <string name="settings_enable_module_shortcut_add">启用圣光传送门添加按钮</string>
-    <string name="settings_enable_module_shortcut_add_summary">在系统圣光阵页面显示WebUI圣光传送门添加按钮</string>
-    <string name="settings_show_disable_all_modules">显示"禁用全部圣光阵"按钮</string>
-    <string name="settings_show_disable_all_modules_summary">在圣光阵页面显示一键禁用所有圣光阵的按钮</string>
+    <string name="settings_enable_module_shortcut_add_summary">在系统圣光阵页面显示 WebUI 圣光传送门添加按钮</string>
     <string name="settings_module_sort_optimization">圣光阵排序优化</string>
     <string name="settings_module_sort_optimization_summary">让系统圣光阵带有WebUI和Action的圣光阵排在前面</string>
     <string name="settings_fold_system_module">折叠系统圣光阵</string>
@@ -275,7 +273,7 @@
     <string name="settings_show_more_module_info_summary">在圣光阵列表中显示圣光阵 ID 和大小</string>
     <string name="apm_install_confirm_content">确定要祝祷%s圣光阵吗？</string>
     <string name="apm_disable_all_title">禁用所有圣光阵</string>
-    <string name="apm_disable_all_confirm">确定禁用全部圣光阵吗？一般来说在天界更新前才这么做。</string>
+    <string name="apm_disable_all_confirm">确定禁用全部圣光阵吗？此操作将停用所有已安装的圣光阵</string>
     <string name="apm_enable_module_banner">启用圣光阵横幅</string>
     <string name="apm_enable_module_banner_summary">为支持的圣光阵显示横幅图片</string>
     <string name="apm_enable_folk_banner">自定义圣光阵横幅</string>
@@ -543,7 +541,7 @@
     <string name="apm_bulk_install_first_use_text">这个功能允许你一次性施展多个魔法阵，属于快速施法，适合施展一些过程中没有涉及咒语咏唱的魔法阵，涉及咏唱古代咒语的请去设置启用完整仪式模式</string>
     <string name="apm_bulk_install_remove">移除</string>
     <string name="apm_first_use_title">欢迎使用星之魔法阵</string>
-    <string name="apm_first_use_text">欢迎使用星之魔法阵，这里使用的是兼容Magisk生态的魔法阵，未来可能会加入对Lua魔法阵的支持，点击右下角的按钮可以施展魔法阵，你也可以使用顶部的施法器批量施展魔法阵，还提供了一个功能一键备份全部魔法阵，但是注意这种方案不一定适用全部魔法阵，还是自己多加备份</string>
+    <string name="apm_first_use_text">欢迎使用星之魔法阵，这里使用的是兼容Magisk生态的魔法阵，点击右下角的按钮可以施展魔法阵，你也可以使用顶部的施法器批量施展魔法阵，还提供了一个功能一键备份全部魔法阵，但是注意这种方案不一定适用全部魔法阵，还是自己多加备份</string>
 
     <string name="kpm_page_first_time_title">魔法警告</string>
     <string name="kpm_page_first_time_message">心之结晶是直接修改心之核心的实现，它不像星之魔法阵一样有很好的恢复机制，出问题只能进入天使之门去修复。建议先激活结晶没有问题再融合到心之核心。如果是只能激活使用的结晶，可以尝试使用自动心之结晶激活功能。如果你不了解心之结晶，请不要使用本功能！</string>
@@ -673,8 +671,21 @@
     <string name="module">星辰圣光阵</string>
     <string name="settings_use_legacy_su_page">单页圣光使者授权</string>
     <string name="settings_use_legacy_su_page_summary">圣光使者页面改用单页神恩设计</string>
-    <string name="settings_category_appearance">变身装束</string>
-    <string name="settings_category_behavior">咒语指令</string>
+    <string name="settings_category_appearance">圣光外观</string>
+    <string name="settings_appearance_font">圣域字体设置</string>
+    <string name="settings_appearance_font_summary">自定义圣域文字样式</string>
+    <string name="settings_appearance_theme">圣殿主题设置</string>
+    <string name="settings_appearance_theme_summary">主题商店、保存、导入和重置</string>
+    <string name="settings_appearance_banner">圣光横幅设置</string>
+    <string name="settings_appearance_banner_summary">模块横幅配置</string>
+    <string name="settings_appearance_layout">圣所布局设置</string>
+    <string name="settings_appearance_layout_summary">首页布局、导航和卡片自定义</string>
+    <string name="settings_appearance_background">圣域背景设置</string>
+    <string name="settings_appearance_background_summary">自定义背景、视频和多背景</string>
+    <string name="settings_appearance_night_mode">暗夜模式设置</string>
+    <string name="settings_appearance_night_mode_summary">深色主题和颜色配置</string>
+    <string name="settings_category_behavior">神谕指令</string>
+    <string name="settings_category_function">圣光功能</string>
     <string name="settings_category_module">魔法模组</string>
     <string name="settings_category_security">结界守护</string>
     
@@ -873,4 +884,35 @@
     <string name="umount_config_save_confirm">确认以圣言保存配置？</string>
     <string name="umount_config_save_success">圣言已传达，配置保存成功</string>
     <string name="umount_config_save_failed">圣言传达失败，配置保存失败</string>
+
+    <!-- 我的圣域页面 -->
+    <string name="my_themes_title">我的圣域</string>
+    <string name="my_themes_empty">圣域尚未装饰</string>
+    <string name="my_themes_empty_action">前往圣光商店</string>
+    <string name="my_themes_apply">施展主题</string>
+    <string name="my_themes_delete">净化主题</string>
+    <string name="my_themes_delete_confirm">确定要净化此主题圣物吗？</string>
+    <string name="my_themes_deleted">主题已净化</string>
+    <string name="my_themes_applied">主题已施展</string>
+    <string name="my_themes_apply_failed">施展主题失败</string>
+    <string name="my_themes_details">主题圣物详情</string>
+
+    <!-- 下载圣光阵 -->
+    <string name="theme_download_title">正在祈召主题</string>
+    <string name="theme_download_completed">祈召完成</string>
+    <string name="theme_download_failed">祈召失败</string>
+    <string name="theme_download_progress">圣光进度</string>
+    <string name="theme_download_file">主题圣物</string>
+    <string name="theme_download_image">圣光预览</string>
+    <string name="theme_download_cancel">终止祈召</string>
+    <string name="theme_download_pause">暂停祈召</string>
+    <string name="theme_download_resume">继续祈召</string>
+    <string name="theme_download_retry">重新祈召</string>
+    <string name="theme_download_apply">施展主题</string>
+    <string name="theme_download_go_to_my_themes">我的圣域</string>
+    <string name="theme_download_retrying">重新祈召中 (%d/3)...</string>
+    <string name="theme_download_preparing">准备祈召...</string>
+    <string name="theme_download_downloading_file">正在下载主题圣物...</string>
+    <string name="theme_download_downloading_image">正在下载圣光预览...</string>
+    <string name="theme_download_finalizing">圣光凝聚中...</string>
 </resources>

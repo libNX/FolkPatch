@@ -155,12 +155,7 @@ fun SettingScreen(navigator: DestinationsNavigator) {
                 onGlobalNamespaceChange = { isGlobalNamespaceEnabled = it },
                 isMagicMountEnabled = isMagicMountEnabled,
                 onMagicMountChange = { isMagicMountEnabled = it },
-                isHideServiceEnabled = isHideServiceEnabled,
-                onHideServiceChange = { isHideServiceEnabled = it },
-                snackBarHost = snackBarHost,
-                onNavigateToUmountConfig = {
-                    navigator.navigate(UmountConfigScreenDestination)
-                }
+                snackBarHost = snackBarHost
             )
 
             AppearanceSettings(
@@ -202,6 +197,18 @@ fun SettingScreen(navigator: DestinationsNavigator) {
                     aPatchReady = aPatchReady
                 )
             }
+
+            FunctionSettings(
+                searchText = searchText,
+                kPatchReady = kPatchReady,
+                aPatchReady = aPatchReady,
+                isHideServiceEnabled = isHideServiceEnabled,
+                onHideServiceChange = { isHideServiceEnabled = it },
+                snackBarHost = snackBarHost,
+                onNavigateToUmountConfig = {
+                    navigator.navigate(UmountConfigScreenDestination)
+                }
+            )
 
             MultimediaSettings(
                 searchText = searchText,

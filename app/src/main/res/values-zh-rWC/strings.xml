@@ -185,7 +185,7 @@
     <string name="su_pkg_root_setting_title">登仙至尊</string>
     <string name="su_pkg_root_setting_summary">启此仙令为尔凡器启登仙至尊，凡器能登仙之咒</string>
     <string name="su_pkg_normal_setting_title">凡尘模式</string>
-    <string name="su_pkg_normal_setting_summary">凡尘之境，无仙法加持。</string>
+    <string name="su_pkg_normal_setting_summary">凡尘之境，无仙法加持，不授登仙至尊之权。</string>
     <string name="su_show_system_apps">显天道凡器</string>
     <string name="su_hide_system_apps">隐天道凡器</string>
     <string name="su_refresh">刷新仙域</string>
@@ -260,9 +260,7 @@
     <string name="settings_apm_stay_on_page">留于渡劫措置台</string>
     <string name="settings_apm_stay_on_page_summary">天道仙符渡劫措置毕，不自动返仙府</string>
     <string name="settings_enable_module_shortcut_add">启遁仙符添加仙钮</string>
-    <string name="settings_enable_module_shortcut_add_summary">于天界仙符台，显WebUI遁仙符添加之仙钮</string>
-    <string name="settings_show_disable_all_modules">显「禁诸仙符」仙钮</string>
-    <string name="settings_show_disable_all_modules_summary">于仙符台，显一键禁诸仙符之仙钮</string>
+    <string name="settings_enable_module_shortcut_add_summary">于天界仙符台，显 WebUI 遁仙符添加之仙钮</string>
     <string name="apm_install_confirm_title">凝符入体</string>
     <string name="apm_install_confirm_content">道友确欲凝炼%s仙符入体乎？</string>
     <string name="settings_show_more_module_info">显仙符详录</string>
@@ -274,7 +272,7 @@
         <string name="settings_simple_list_bottom_bar">简约仙符底栏</string>
         <string name="settings_simple_list_bottom_bar_summary">仙符符法使用纯图标按钮样式，灵感来自APatch</string>
     <string name="apm_disable_all_title">禁诸仙符</string>
-    <string name="apm_disable_all_confirm">确欲尽禁诸仙符乎？大抵天道易筋前为之可避天劫。</string>
+    <string name="apm_disable_all_confirm">确欲尽禁诸仙符乎？此术将废诸已施之仙符</string>
     <string name="apm_enable_module_banner">启仙阵横幅</string>
     <string name="apm_enable_module_banner_summary">为所容之仙阵显横幅仙图</string>
     <string name="apm_enable_folk_banner">自定仙阵横幅</string>
@@ -382,7 +380,7 @@
     <string name="teal_theme">苍绿仙光</string>
     <string name="yellow_theme">金阳仙光</string>
 
-    <string name="about_app_desc">本于道核之登仙解法，可驭道核仙符、钩道核仙函，毋需重编道核仙法。</string>
+    <string name="about_app_desc">基于 KernelPatch 仙法之 Root 实现，毋需重编道核的同时，允许钩道核仙函。</string>
     <string name="about_powered_by">赖%s仙门以辅</string>
     <string name="about_telegram_group">Telegram仙友寮阁</string>
     
@@ -547,7 +545,7 @@
     <string name="apm_bulk_install_first_use_text">此仙能可令汝一次性引多枚仙符，此乃速引之法，宜用引符时不涉音量仙键之仙符。若涉音量仙键之操作，请去设置启用完整流程引符之法。</string>
     <string name="apm_bulk_install_remove">除</string>
     <string name="apm_first_use_title">欢迎使用天道仙符</string>
-    <string name="apm_first_use_text">欢迎使用天道仙符，此地所用乃Magisk仙阵兼容之仙符，将来或加Lua仙符之容，右下之钮可引仙符，亦可引顶部之仙器批量引符，又有一键备份所有仙符之能，然此法未必适所有仙符，汝当多加备份</string>
+    <string name="apm_first_use_text">欢迎使用天道仙符，此地所用乃Magisk仙阵兼容之仙符，右下之钮可引仙符，亦可引顶部之仙器批量引符，又有一键备份所有仙符之能，然此法未必适所有仙符，汝当多加备份</string>
 
     <string name="kpm_page_first_time_title">渡劫警言</string>
     <string name="kpm_page_first_time_message">道核仙符者，直改仙躯Boot之法也，不若天道仙符有救砖之策，有天劫则唯入Fastboot仙台修之。宜先引符入道，无天劫再嵌于仙躯Boot。若仙符唯可引符用之，可试自动道核仙符引符之能。若未谙道核仙符，毋用此渡劫之能！</string>
@@ -674,7 +672,20 @@
     <string name="settings_use_legacy_su_page">单页登仙至尊授权</string>
     <string name="settings_use_legacy_su_page_summary">登仙至尊页面改用单页符箓设计</string>
     <string name="settings_category_appearance">道韵外观</string>
+    <string name="settings_appearance_font">道韵字体</string>
+    <string name="settings_appearance_font_summary">自定义字体配置</string>
+    <string name="settings_appearance_theme">洞府主题</string>
+    <string name="settings_appearance_theme_summary">主题商店、保存、导入和重置</string>
+    <string name="settings_appearance_banner">仙门横幅</string>
+    <string name="settings_appearance_banner_summary">模块横幅配置</string>
+    <string name="settings_appearance_layout">仙府布局</string>
+    <string name="settings_appearance_layout_summary">首页布局、导航和卡片自定义</string>
+    <string name="settings_appearance_background">洞府背景</string>
+    <string name="settings_appearance_background_summary">自定义背景、视频和多背景</string>
+    <string name="settings_appearance_night_mode">夜间闭关模式</string>
+    <string name="settings_appearance_night_mode_summary">深色主题和颜色配置</string>
     <string name="settings_category_behavior">功法运转</string>
+    <string name="settings_category_function">悟道功能</string>
     <string name="settings_category_module">悟道模块</string>
     <string name="settings_category_security">护道结界</string>
     
@@ -695,7 +706,7 @@
     <string name="settings_music_saved">仙音玉简已封存</string>
     <string name="settings_music_save_error">仙音玉简封存失败</string>
     <string name="settings_music_cleared">仙音已涤除</string>
-    <string name="settings_category_multimedia">仙音阁</string>
+    <string name="settings_category_multimedia">仙音幻阁</string>
     <string name="settings_music_playback_control">仙音法阵</string>
     <!-- Theme Store Filter -->
     <string name="theme_store_filter_title">筛选仙法</string>
@@ -870,4 +881,35 @@
     <string name="umount_config_save_confirm">确认炼制并保存丹方？</string>
     <string name="umount_config_save_success">丹成，丹方保存成功</string>
     <string name="umount_config_save_failed">炉火不旺，丹方保存失败</string>
+
+    <!-- 我的仙府页面 -->
+    <string name="my_themes_title">我的仙府</string>
+    <string name="my_themes_empty">仙府空空如也</string>
+    <string name="my_themes_empty_action">前往仙市逛逛</string>
+    <string name="my_themes_apply">施展主题</string>
+    <string name="my_themes_delete">舍弃主题</string>
+    <string name="my_themes_delete_confirm">确定要舍弃此主题仙卷吗？</string>
+    <string name="my_themes_deleted">主题已舍弃</string>
+    <string name="my_themes_applied">主题已施展</string>
+    <string name="my_themes_apply_failed">施展主题失败</string>
+    <string name="my_themes_details">主题仙卷详情</string>
+
+    <!-- 下载对话 -->
+    <string name="theme_download_title">正在纳符主题</string>
+    <string name="theme_download_completed">纳符圆满</string>
+    <string name="theme_download_failed">纳符受阻</string>
+    <string name="theme_download_progress">仙途进度</string>
+    <string name="theme_download_file">主题仙卷</string>
+    <string name="theme_download_image">仙图预览</string>
+    <string name="theme_download_cancel">终止纳符</string>
+    <string name="theme_download_pause">暂停纳符</string>
+    <string name="theme_download_resume">继续纳符</string>
+    <string name="theme_download_retry">重新纳符</string>
+    <string name="theme_download_apply">施展主题</string>
+    <string name="theme_download_go_to_my_themes">我的仙府</string>
+    <string name="theme_download_retrying">重新纳符中 (%d/3)...</string>
+    <string name="theme_download_preparing">准备纳符...</string>
+    <string name="theme_download_downloading_file">正在纳取主题仙卷...</string>
+    <string name="theme_download_downloading_image">正在纳取仙图预览...</string>
+    <string name="theme_download_finalizing">凝丹中...</string>
 </resources>

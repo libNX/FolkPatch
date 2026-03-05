@@ -206,7 +206,7 @@
     <string name="su_pkg_root_setting_title">Superusuario</string>
     <string name="su_pkg_root_setting_summary">Habilitar esta opción para otorgar acceso de superusuario a tu app, permitiendo usar comandos SU</string>
     <string name="su_pkg_normal_setting_title">Modo normal</string>
-    <string name="su_pkg_normal_setting_summary">Estado predeterminado, sin procesamiento especial.</string>
+    <string name="su_pkg_normal_setting_summary">No se ha concedido acceso root, la aplicación se ejecuta sin privilegios de superusuario.</string>
     <string name="su_show_system_apps">Mostrar apps del sistema</string>
     <string name="su_hide_system_apps">Ocultar apps del sistema</string>
     <string name="su_refresh">Actualizar</string>
@@ -274,8 +274,6 @@
     <string name="settings_apm_stay_on_page_summary">No regresar automáticamente tras ejecutar una acción del módulo</string>
     <string name="settings_enable_module_shortcut_add">Habilitar botón de agregar acceso directo</string>
     <string name="settings_enable_module_shortcut_add_summary">Mostrar botón de agregar acceso directo WebUI</string>
-    <string name="settings_show_disable_all_modules">Mostrar botón \'Deshabilitar todos\'</string>
-    <string name="settings_show_disable_all_modules_summary">Mostrar un botón en la página de módulos para deshabilitar todos a la vez</string>
     <string name="settings_module_sort_optimization">Optimización de orden de módulos</string>
     <string name="settings_module_sort_optimization_summary">Hacer que los módulos del sistema con WebUI y Acción aparezcan arriba</string>
     <string name="settings_fold_system_module">Plegar Módulos del Sistema</string>
@@ -285,7 +283,7 @@
     <string name="apm_install_confirm_title">Instalar Módulo</string>
     <string name="apm_install_confirm_content">¿Seguro que deseas instalar %s?</string>
     <string name="apm_disable_all_title">Deshabilitar todos los módulos</string>
-    <string name="apm_disable_all_confirm">¿Seguro que deseas deshabilitar todos los módulos? Generalmente, esto se hace antes de una actualización OTA.</string>
+    <string name="apm_disable_all_confirm">¿Seguro que deseas deshabilitar todos los módulos? Esto desactivará todos los módulos instalados.</string>
     <string name="apm_enable_module_banner">Habilitar banner de módulo</string>
     <string name="apm_enable_module_banner_summary">Mostrar imagen de banner para módulos si está disponible</string>
     <string name="apm_enable_folk_banner">Personalizar banner de módulo</string>
@@ -394,7 +392,7 @@ Aquí hay algunas posibles razones para el fallo de autenticación—por favor v
     <string name="teal_theme">Verde azulado</string>
     <string name="yellow_theme">Amarillo</string>
 
-    <string name="about_app_desc">Una solución root basada en kernel que soporta módulos de kernel y hooks de función del kernel sin recompilar.</string>
+    <string name="about_app_desc">Una implementación Root basada en KernelPatch, permitiendo hooks de funciones del kernel sin recompilar el kernel.</string>
     <string name="about_powered_by">Impulsado por %1$s</string>
     <string name="about_telegram_group">Grupo de Telegram</string>
     
@@ -550,7 +548,7 @@ Aquí hay algunas posibles razones para el fallo de autenticación—por favor v
     <string name="apm_bulk_install_first_use_text">Esta función te permite instalar múltiples módulos a la vez. Es un método rápido adecuado para módulos que no requieren operaciones de teclas durante la instalación. Para módulos que requieren interacciones con teclas de volumen, por favor activa el modo de instalación completa en la configuración.</string>
     <string name="apm_bulk_install_remove">Eliminar</string>
     <string name="apm_first_use_title">Bienvenido a Módulos del Sistema</string>
-    <string name="apm_first_use_text">Bienvenido a Módulos del Sistema, esto usa módulos compatibles con el ecosistema Magisk. En el futuro, podría añadirse soporte para módulos Lua. Pulsa el botón en la esquina inferior derecha para instalar módulos. También puedes usar el instalador en la parte superior para instalar módulos por lotes. Se proporciona una función para respaldar todos los módulos con un clic, pero ten en cuenta que esta solución puede no ser adecuada para todos los módulos, así que deberías hacer tus propios respaldos.</string>
+    <string name="apm_first_use_text">Bienvenido a Módulos del Sistema, esto usa módulos compatibles con el ecosistema Magisk. Pulsa el botón en la esquina inferior derecha para instalar módulos. También puedes usar el instalador en la parte superior para instalar módulos por lotes. Se proporciona una función para respaldar todos los módulos con un clic, pero ten en cuenta que esta solución puede no ser adecuada para todos los módulos, así que deberías hacer tus propios respaldos.</string>
 
     <string name="kpm_autoload_kpm_list_title">Módulos KPM</string>
     <string name="kpm_autoload_no_kpm_added">No se añadieron módulos KPM</string>
@@ -676,7 +674,20 @@ Por ejemplo, los KPM que previenen la modificación de particiones solo pueden u
     <string name="superuser">Superusuario</string>
     <string name="module">Módulos</string>
     <string name="settings_category_appearance">Apariencia</string>
+    <string name="settings_appearance_font">Configuración de fuente</string>
+    <string name="settings_appearance_font_summary">Configuración de fuente personalizada</string>
+    <string name="settings_appearance_theme">Configuración de tema</string>
+    <string name="settings_appearance_theme_summary">Tienda de temas, guardar, importar y restablecer</string>
+    <string name="settings_appearance_banner">Configuración de banner</string>
+    <string name="settings_appearance_banner_summary">Configuración de banner de módulo</string>
+    <string name="settings_appearance_layout">Configuración de diseño</string>
+    <string name="settings_appearance_layout_summary">Diseño de inicio, navegación y personalización de tarjetas</string>
+    <string name="settings_appearance_background">Configuración de fondo</string>
+    <string name="settings_appearance_background_summary">Fondo personalizado, video y multi-fondo</string>
+    <string name="settings_appearance_night_mode">Configuración de modo nocturno</string>
+    <string name="settings_appearance_night_mode_summary">Tema oscuro y configuración de color</string>
     <string name="settings_category_behavior">Comportamiento</string>
+    <string name="settings_category_function">Función</string>
     <string name="settings_use_legacy_su_page">Autorización de superusuario de página única</string>
     <string name="settings_use_legacy_su_page_summary">La página de superusuario cambió a diseño de autorización de página única</string>
     <string name="settings_category_module">Módulos</string>
@@ -889,4 +900,35 @@ Por ejemplo, los KPM que previenen la modificación de particiones solo pueden u
     <string name="umount_config_save_confirm">¿Confirmar guardar configuración?</string>
     <string name="umount_config_save_success">Configuración guardada exitosamente</string>
     <string name="umount_config_save_failed">Error al guardar configuración</string>
+
+    <!-- Página Mis Temas -->
+    <string name="my_themes_title">Mis Temas</string>
+    <string name="my_themes_empty">Aún no hay temas</string>
+    <string name="my_themes_empty_action">Explorar Tienda de Temas</string>
+    <string name="my_themes_apply">Aplicar Tema</string>
+    <string name="my_themes_delete">Eliminar Tema</string>
+    <string name="my_themes_delete_confirm">¿Estás seguro de que quieres eliminar este tema?</string>
+    <string name="my_themes_deleted">Tema eliminado</string>
+    <string name="my_themes_applied">Tema aplicado</string>
+    <string name="my_themes_apply_failed">Error al aplicar el tema</string>
+    <string name="my_themes_details">Detalles del Tema</string>
+
+    <!-- Diálogo de Descarga -->
+    <string name="theme_download_title">Descargando Tema</string>
+    <string name="theme_download_completed">Descarga completada</string>
+    <string name="theme_download_failed">Descarga fallida</string>
+    <string name="theme_download_progress">Progreso</string>
+    <string name="theme_download_file">Archivo de Tema</string>
+    <string name="theme_download_image">Imagen de Vista Previa</string>
+    <string name="theme_download_cancel">Cancelar</string>
+    <string name="theme_download_pause">Pausar</string>
+    <string name="theme_download_resume">Reanudar</string>
+    <string name="theme_download_retry">Reintentar</string>
+    <string name="theme_download_apply">Aplicar Tema</string>
+    <string name="theme_download_go_to_my_themes">Mis Temas</string>
+    <string name="theme_download_retrying">Reintentando (%d/3)...</string>
+    <string name="theme_download_preparing">Preparando descarga...</string>
+    <string name="theme_download_downloading_file">Descargando archivo de tema...</string>
+    <string name="theme_download_downloading_image">Descargando imagen de vista previa...</string>
+    <string name="theme_download_finalizing">Finalizando...</string>
 </resources>

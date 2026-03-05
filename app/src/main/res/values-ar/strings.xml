@@ -206,7 +206,7 @@
     <string name="su_pkg_root_setting_title">المستخدم المتميز</string>
     <string name="su_pkg_root_setting_summary">تفعيل هذا الخيار لمنح صلاحيات المستخدم المتميز لتطبيقك، مما يسمح باستخدام أوامر SU</string>
     <string name="su_pkg_normal_setting_title">الوضع العادي</string>
-    <string name="su_pkg_normal_setting_summary">الحالة الافتراضية، بدون معالجة خاصة。</string>
+    <string name="su_pkg_normal_setting_summary">لم يتم منح حق الوصول إلى الجذر، يتم تشغيل التطبيق بدون صلاحيات المستخدم المتميز.</string>
     <string name="su_show_system_apps">إظهار تطبيقات النظام</string>
     <string name="su_hide_system_apps">إخفاء تطبيقات النظام</string>
     <string name="su_refresh">تحديث</string>
@@ -274,8 +274,6 @@
     <string name="settings_apm_stay_on_page_summary">عدم الرجوع تلقائيًا بعد تنفيذ إجراء الوحدة</string>
     <string name="settings_enable_module_shortcut_add">تمكين زر إضافة اختصار</string>
     <string name="settings_enable_module_shortcut_add_summary">إظهار زر إضافة اختصار واجهة المستخدم الرسومية للويب</string>
-    <string name="settings_show_disable_all_modules">إظهار زر "تعطيل كل الوحدات"</string>
-    <string name="settings_show_disable_all_modules_summary">عرض زر في صفحة الوحدات لتعطيل جميع الوحدات مرة واحدة</string>
     <string name="settings_module_sort_optimization">تحسين فرز الوحدات</string>
     <string name="settings_module_sort_optimization_summary">جعل وحدات النظام مع واجهة المستخدم الرسومية للويب والإجراء تظهر في الأعلى</string>
     <string name="settings_fold_system_module">طي وحدات النظام</string>
@@ -285,7 +283,7 @@
     <string name="apm_install_confirm_title">تثبيت الوحدة</string>
     <string name="apm_install_confirm_content">هل أنت متأكد من أنك تريد تثبيت %s؟</string>
     <string name="apm_disable_all_title">تعطيل كل الوحدات</string>
-    <string name="apm_disable_all_confirm">هل أنت متأكد من أنك تريد تعطيل جميع الوحدات؟ بشكل عام، يتم ذلك قبل تحديث OTA.</string>
+    <string name="apm_disable_all_confirm">هل أنت متأكد من أنك تريد تعطيل جميع الوحدات؟ سيقوم هذا بتعطيل جميع الوحدات المثبتة.</string>
     <string name="apm_enable_module_banner">تمكين لافتة الوحدة</string>
     <string name="apm_enable_module_banner_summary">عرض صورة اللافتة للوحدات إذا كانت متوفرة</string>
     <string name="apm_enable_folk_banner">تخصيص لافتة الوحدة</string>
@@ -395,7 +393,7 @@
     <string name="teal_theme">أزرق مخضر</string>
     <string name="yellow_theme">أصفر</string>
 
-    <string name="about_app_desc">حل روت قائم على النواة يدعم وحدات النواة وخطافات وظائف النواة دون إعادة تجميع النواة.</string>
+    <string name="about_app_desc">تطبيق Root مبني على KernelPatch، يسمح بخطاف وظائف النواة دون إعادة تجميع النواة.</string>
     <string name="about_powered_by">مدعوم من %1$s</string>
     <string name="about_telegram_group">مجموعة تيليجرام</string>
     
@@ -552,7 +550,7 @@
     <string name="apm_bulk_install_first_use_text">تتيح لك هذه الميزة تثبيت وحدات متعددة في وقت واحد. إنها طريقة تثبيت سريعة مناسبة للوحدات التي لا تتضمن عمليات مفتاحية أثناء التثبيت. بالنسبة للوحدات التي تتطلب تفاعلات مفاتيح الصوت، يرجى تفعيل وضع التثبيت الكامل في الإعدادات.</string>
     <string name="apm_bulk_install_remove">إزالة</string>
     <string name="apm_first_use_title">مرحبًا بك في وحدات النظام</string>
-    <string name="apm_first_use_text">مرحبًا بك في وحدات النظام، يستخدم هذا وحدات متوافقة مع نظام Magisk البيئي. في المستقبل، قد تتم إضافة دعم لوحدات Lua. انقر فوق الزر في الزاوية اليمنى السفلية لتثبيت الوحدات. يمكنك أيضًا استخدام المثبت في الأعلى لتثبيت الوحدات بشكل مجمع. يتم توفير ميزة لنسخ احتياطي لجميع الوحدات بنقرة واحدة أيضًا، ولكن لاحظ أن هذا الحل قد لا يكون مناسبًا لجميع الوحدات، لذلك يجب عليك عمل نسخ احتياطية خاصة بك.</string>
+    <string name="apm_first_use_text">مرحبًا بك في وحدات النظام، يستخدم هذا وحدات متوافقة مع نظام Magisk البيئي. انقر فوق الزر في الزاوية اليمنى السفلية لتثبيت الوحدات. يمكنك أيضًا استخدام المثبت في الأعلى لتثبيت الوحدات بشكل مجمع. يتم توفير ميزة لنسخ احتياطي لجميع الوحدات بنقرة واحدة أيضًا، ولكن لاحظ أن هذا الحل قد لا يكون مناسبًا لجميع الوحدات، لذلك يجب عليك عمل نسخ احتياطية خاصة بك.</string>
 
     <string name="kpm_autoload_kpm_list_title">وحدات KPM</string>
     <string name="kpm_autoload_no_kpm_added">لم تتم إضافة أي وحدات KPM</string>
@@ -683,7 +681,20 @@
     <string name="app_list_loading_scheme_package_manager">PackageManager (واجهة برمجة تطبيقات النظام)</string>
     <string name="app_list_loading_scheme_dialog_title">مخطط التحميل</string>
     <string name="settings_category_appearance">المظهر</string>
+    <string name="settings_appearance_font">إعدادات الخط</string>
+    <string name="settings_appearance_font_summary">تكوين الخط المخصص</string>
+    <string name="settings_appearance_theme">إعدادات المظهر</string>
+    <string name="settings_appearance_theme_summary">متجر المواضيع وحفظ واستيراد وإعادة تعيين</string>
+    <string name="settings_appearance_banner">إعدادات اللافتة</string>
+    <string name="settings_appearance_banner_summary">تكوين لافتة الوحدة</string>
+    <string name="settings_appearance_layout">إعدادات التخطيط</string>
+    <string name="settings_appearance_layout_summary">تخطيط الصفحة الرئيسية والتنقل وتخصيص البطاقة</string>
+    <string name="settings_appearance_background">إعدادات الخلفية</string>
+    <string name="settings_appearance_background_summary">خلفية مخصصة وفيديو والعديد من الخلفيات</string>
+    <string name="settings_appearance_night_mode">إعدادات الوضع الليلي</string>
+    <string name="settings_appearance_night_mode_summary">السمة الداكنة وتكوين الألوان</string>
     <string name="settings_category_behavior">السلوك</string>
+    <string name="settings_category_function">الوظيفة</string>
     <string name="settings_use_legacy_su_page">تفويض المستخدم المتميز لصفحة واحدة</string>
     <string name="settings_use_legacy_su_page_summary">تم تبديل صفحة المستخدم المتميز إلى تصميم تفويض لصفحة واحدة</string>
     <string name="settings_category_module">الوحدات</string>
@@ -874,4 +885,35 @@
     <string name="umount_config_save_confirm">تأكيد حفظ التكوين؟</string>
     <string name="umount_config_save_success">تم حفظ التكوين بنجاح</string>
     <string name="umount_config_save_failed">فشل حفظ التكوين</string>
+
+    <!-- صفحة سماتي -->
+    <string name="my_themes_title">سماتي</string>
+    <string name="my_themes_empty">لا توجد سمات بعد</string>
+    <string name="my_themes_empty_action">تصفح متجر السمات</string>
+    <string name="my_themes_apply">تطبيق السمة</string>
+    <string name="my_themes_delete">حذف السمة</string>
+    <string name="my_themes_delete_confirm">هل أنت متأكد من حذف هذه السمة؟</string>
+    <string name="my_themes_deleted">تم حذف السمة</string>
+    <string name="my_themes_applied">تم تطبيق السمة</string>
+    <string name="my_themes_apply_failed">فشل تطبيق السمة</string>
+    <string name="my_themes_details">تفاصيل السمة</string>
+
+    <!-- حوار التنزيل -->
+    <string name="theme_download_title">جارٍ تنزيل السمة</string>
+    <string name="theme_download_completed">اكتمل التنزيل</string>
+    <string name="theme_download_failed">فشل التنزيل</string>
+    <string name="theme_download_progress">التقدم</string>
+    <string name="theme_download_file">ملف السمة</string>
+    <string name="theme_download_image">صورة المعاينة</string>
+    <string name="theme_download_cancel">إلغاء</string>
+    <string name="theme_download_pause">إيقاف مؤقت</string>
+    <string name="theme_download_resume">استئناف</string>
+    <string name="theme_download_retry">إعادة المحاولة</string>
+    <string name="theme_download_apply">تطبيق السمة</string>
+    <string name="theme_download_go_to_my_themes">سماتي</string>
+    <string name="theme_download_retrying">إعادة المحاولة (%d/3)...</string>
+    <string name="theme_download_preparing">جارٍ تحضير التنزيل...</string>
+    <string name="theme_download_downloading_file">جارٍ تنزيل ملف السمة...</string>
+    <string name="theme_download_downloading_image">جارٍ تنزيل صورة المعاينة...</string>
+    <string name="theme_download_finalizing">جارٍ الانتهاء...</string>
 </resources>
