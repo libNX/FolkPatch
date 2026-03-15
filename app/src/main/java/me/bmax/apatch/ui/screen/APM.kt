@@ -1493,8 +1493,10 @@ private fun ModuleItem(
                             }
                         ))
                     }
+
+                    val hasUpdateButton = updateUrl.isNotEmpty() && !module.remove && !module.update
                     
-                    if (enableModuleShortcutAdd && module.enabled && !module.remove && (module.hasWebUi || module.hasActionScript)) {
+                    if (enableModuleShortcutAdd && module.enabled && !module.remove && (module.hasWebUi || module.hasActionScript) && !hasUpdateButton) {
                         buttons.add(ModuleButtonConfig(
                             icon = Icons.Outlined.Add,
                             text = shortcutAdd,
@@ -1508,7 +1510,7 @@ private fun ModuleItem(
                         ))
                     }
                     
-                    if (updateUrl.isNotEmpty() && !module.remove && !module.update) {
+                    if (hasUpdateButton) {
                         buttons.add(ModuleButtonConfig(
                             icon = Icons.Outlined.Download,
                             text = stringResource(R.string.apm_update),
