@@ -110,6 +110,39 @@ object ModuleShortcut {
         deleteShortcut(context, "module_action_$moduleId")
     }
 
+    fun createScriptShortcut(
+        context: Context,
+        scriptId: String,
+        name: String,
+        iconUri: String?
+    ) {
+        val shortcutId = "script_$scriptId"
+        val shortcutIntent = Intent().apply {
+            component = getLauncherComponent(context)
+            action = Intent.ACTION_VIEW
+            putExtra("script_id", scriptId)
+            putExtra("from_script_shortcut", true)
+            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+        }
+        createModuleShortcut(
+            context = context,
+            moduleId = scriptId,
+            name = name,
+            iconUri = iconUri,
+            shortcutId = shortcutId,
+            shortcutIntent = shortcutIntent,
+            logPrefix = "createScriptShortcut"
+        )
+    }
+
+    fun hasScriptShortcut(context: Context, scriptId: String): Boolean {
+        return hasPinnedShortcut(context, "script_$scriptId")
+    }
+
+    fun deleteScriptShortcut(context: Context, scriptId: String) {
+        deleteShortcut(context, "script_$scriptId")
+    }
+
     private fun createModuleShortcut(
         context: Context,
         moduleId: String,

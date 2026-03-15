@@ -129,6 +129,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var permissionHandler: PermissionRequestHandler
     private val isLocked = mutableStateOf(false)
     private var pendingActionModuleId by mutableStateOf<String?>(null)
+    private var pendingScriptId by mutableStateOf<String?>(null)
 
     private fun getFileName(context: android.content.Context, uri: Uri): String {
         var result: String? = null
@@ -184,6 +185,12 @@ class MainActivity : AppCompatActivity() {
             val id = intent.getStringExtra("apm_action_module_id")
             if (!id.isNullOrEmpty()) {
                 pendingActionModuleId = id
+            }
+        }
+        if (intent?.getBooleanExtra("from_script_shortcut", false) == true) {
+            val id = intent.getStringExtra("script_id")
+            if (!id.isNullOrEmpty()) {
+                pendingScriptId = id
             }
         }
     }
@@ -337,6 +344,18 @@ class MainActivity : AppCompatActivity() {
                 if (!id.isNullOrEmpty()) {
                     navigator.navigate(com.ramcosta.composedestinations.generated.destinations.ExecuteAPMActionScreenDestination(id))
                     pendingActionModuleId = null
+                }
+            }
+
+            LaunchedEffect(pendingScriptId) {
+                val id = pendingScriptId
+                if (!id.isNullOrEmpty()) {
+                    kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                        me.bmax.apatch.util.ScriptLibraryManager.loadScripts().find { it.id == id }
+                    }?.let { scriptInfo ->
+                        navigator.navigate(com.ramcosta.composedestinations.generated.destinations.ScriptExecutionLogScreenDestination(scriptInfo))
+                    }
+                    pendingScriptId = null
                 }
             }
 
