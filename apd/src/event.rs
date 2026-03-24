@@ -1,3 +1,12 @@
+use crate::mpolicy::get_policy_main;
+use anyhow::{Context, Result};
+use libc::SIGPWR;
+use log::{info, warn};
+use notify::{
+    event::{ModifyKind, RenameMode},
+    Config, Event, EventKind, INotifyWatcher, RecursiveMode, Watcher,
+};
+use signal_hook::{consts::signal::*, iterator::Signals};
 use std::{
     env,
     ffi::CStr,
@@ -9,21 +18,10 @@ use std::{
     thread,
     time::Duration,
 };
-use crate::mpolicy::{get_policy_main};
-use anyhow::{Context, Result};
-use libc::SIGPWR;
-use log::{info, warn};
-use notify::{
-    Config, Event, EventKind, INotifyWatcher, RecursiveMode, Watcher,
-    event::{ModifyKind, RenameMode},
-};
-use signal_hook::{consts::signal::*, iterator::Signals};
 
 use crate::{
     assets, defs, lua, metamodule, module, restorecon, supercall,
-    supercall::{
-        fork_for_result, init_load_package_uid_config, init_load_su_path, refresh_ap_package_list,
-    },
+    supercall::{init_load_package_uid_config, init_load_su_path, refresh_ap_package_list},
     utils::{self, switch_cgroups},
 };
 
@@ -35,7 +33,7 @@ pub fn report_kernel(superkey: Option<String>, event: &str, state: &str) -> Resu
         state.to_string(),
     ];
     let args_ref: Vec<&str> = args.iter().map(|s| s.as_str()).collect();
-    let result = utils::run_command("truncate", &args_ref, None)?.wait()?;
+    let _result = utils::run_command("truncate", &args_ref, None)?.wait()?;
     Ok(())
 }
 
@@ -49,7 +47,8 @@ pub fn on_post_data_fs(superkey: Option<String>) -> Result<()> {
     if !fp_dir.exists() {
         fs::create_dir_all(fp_dir).with_context(|| "Failed to create /data/adb/fp directory")?;
         let permissions = fs::Permissions::from_mode(0o755);
-        fs::set_permissions(fp_dir, permissions).with_context(|| "Failed to set permissions for /data/adb/fp")?;
+        fs::set_permissions(fp_dir, permissions)
+            .with_context(|| "Failed to set permissions for /data/adb/fp")?;
         info!("Created directory: /data/adb/fp");
     }
 
@@ -58,14 +57,11 @@ pub fn on_post_data_fs(superkey: Option<String>) -> Result<()> {
 
     init_load_su_path(&superkey);
 
-    let mut sepol = get_policy_main(&[
-        "magiskpolicy".to_string(),
-        "--live".to_string(),
-    ])?;
+    let mut sepol = get_policy_main(&["magiskpolicy".to_string(), "--live".to_string()])?;
     sepol.magisk_rules();
-    sepol.to_file("/sys/fs/selinux/load")
-            .context("Cannot apply policy")?;
-
+    sepol
+        .to_file("/sys/fs/selinux/load")
+        .context("Cannot apply policy")?;
 
     info!("Re-privilege apd profile after injecting sepolicy");
     supercall::privilege_apd_profile(&superkey);
@@ -206,8 +202,7 @@ pub fn on_post_data_fs(superkey: Option<String>) -> Result<()> {
     if Path::new(defs::HIDE_SERVICE_FILE).exists() {
         info!("Hide Service enabled, executing hide binary...");
         if Path::new(defs::HIDE_BINARY_PATH).exists() {
-            let result = Command::new(defs::HIDE_BINARY_PATH)
-                .status();
+            let result = Command::new(defs::HIDE_BINARY_PATH).status();
             match result {
                 Ok(status) => {
                     if status.success() {
@@ -221,7 +216,10 @@ pub fn on_post_data_fs(superkey: Option<String>) -> Result<()> {
                 }
             }
         } else {
-            warn!("Hide binary not found at {}, please copy it manually", defs::HIDE_BINARY_PATH);
+            warn!(
+                "Hide binary not found at {}, please copy it manually",
+                defs::HIDE_BINARY_PATH
+            );
         }
     } else {
         info!("Hide Service disabled");
@@ -231,8 +229,7 @@ pub fn on_post_data_fs(superkey: Option<String>) -> Result<()> {
     if Path::new(defs::UMOUNT_SERVICE_FILE).exists() {
         info!("Umount Service enabled, executing umount binary...");
         if Path::new(defs::UMOUNT_BINARY_PATH).exists() {
-            let result = Command::new(defs::UMOUNT_BINARY_PATH)
-                .status();
+            let result = Command::new(defs::UMOUNT_BINARY_PATH).status();
             match result {
                 Ok(status) => {
                     if status.success() {
@@ -246,7 +243,10 @@ pub fn on_post_data_fs(superkey: Option<String>) -> Result<()> {
                 }
             }
         } else {
-            warn!("Umount binary not found at {}, please copy it manually", defs::UMOUNT_BINARY_PATH);
+            warn!(
+                "Umount binary not found at {}, please copy it manually",
+                defs::UMOUNT_BINARY_PATH
+            );
         }
     } else {
         info!("Umount Service disabled");

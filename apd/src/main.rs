@@ -10,6 +10,7 @@ mod module;
 mod package;
 #[cfg(any(target_os = "linux", target_os = "android"))]
 mod pty;
+mod resetprop;
 mod restorecon;
 mod sepolicy;
 mod mpolicy;

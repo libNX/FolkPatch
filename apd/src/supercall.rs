@@ -10,7 +10,7 @@ use std::{
 };
 
 use errno::errno;
-use libc::{EINVAL, c_int, c_long, c_void, execv, fork, pid_t, setenv, syscall, uid_t, wait};
+use libc::{c_int, c_long, c_void, execv, fork, pid_t, setenv, syscall, uid_t, wait, EINVAL};
 use log::{error, info, warn};
 
 use crate::package::{read_ap_package_config, synchronize_package_uid};
@@ -22,8 +22,11 @@ const PATCH: c_long = 1;
 const KSTORAGE_EXCLUDE_LIST_GROUP: i32 = 1;
 
 const __NR_SUPERCALL: c_long = 45;
+#[allow(dead_code)]
 const SUPERCALL_KLOG: c_long = 0x1004;
+#[allow(dead_code)]
 const SUPERCALL_KERNELPATCH_VER: c_long = 0x1008;
+#[allow(dead_code)]
 const SUPERCALL_KERNEL_VER: c_long = 0x1009;
 const SUPERCALL_SU: c_long = 0x1010;
 const SUPERCALL_KSTORAGE_WRITE: c_long = 0x1041;
@@ -160,6 +163,7 @@ fn sc_su_reset_path(key: &CStr, path: &CStr) -> c_long {
     }
 }
 
+#[allow(dead_code)]
 fn sc_kp_ver(key: &CStr) -> Result<u32, i32> {
     if key.to_bytes().is_empty() {
         return Err(-EINVAL);
@@ -174,6 +178,7 @@ fn sc_kp_ver(key: &CStr) -> Result<u32, i32> {
     Ok(ret as u32)
 }
 
+#[allow(dead_code)]
 fn sc_k_ver(key: &CStr) -> Result<u32, i32> {
     if key.to_bytes().is_empty() {
         return Err(-EINVAL);
@@ -188,6 +193,7 @@ fn sc_k_ver(key: &CStr) -> Result<u32, i32> {
     Ok(ret as u32)
 }
 
+#[allow(dead_code)]
 fn sc_klog(key: &CStr, msg: &CStr) -> c_long {
     if key.to_bytes().is_empty() || msg.to_bytes().is_empty() {
         return (-EINVAL).into();
@@ -389,6 +395,7 @@ pub fn init_load_su_path(superkey: &Option<String>) {
     }
 }
 
+#[allow(dead_code)]
 fn set_env_var(key: &str, value: &str) {
     let key_c = CString::new(key).expect("CString::new failed");
     let value_c = CString::new(value).expect("CString::new failed");
@@ -397,6 +404,7 @@ fn set_env_var(key: &str, value: &str) {
     }
 }
 
+#[allow(dead_code)]
 fn log_kernel(key: &CStr, _fmt: &str, args: std::fmt::Arguments) -> c_long {
     let mut buf = String::with_capacity(1024);
     write!(&mut buf, "{}", args).expect("Error formatting string");
@@ -412,6 +420,7 @@ macro_rules! log_kernel {
     )
 }
 
+#[allow(dead_code)]
 pub fn fork_for_result(exec: &str, argv: &[&str], key: &Option<String>) {
     let mut cmd = String::new();
     for arg in argv {
