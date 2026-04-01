@@ -949,4 +949,31 @@ Please ensure the app is completely closed and reopened for the commands to exec
     <string name="script_library_log_save_failed">Failed to save log: %s</string>
     <string name="settings_predictive_back">Predictive Back Gesture</string>
     <string name="settings_predictive_back_summary">Enable the Android 14+ predictive back gesture animation</string>
+
+    <string name="app_title_superroot">SuperRoot</string>
+    <string name="backup_failed">Backup failed: %s</string>
+    <string name="delete_failed">Delete failed: %s</string>
+    <string name="delete_remote_backup_confirm">Are you sure you want to delete the cloud backup?</string>
+    <string name="delete_success">Delete successful</string>
+    <string name="restore_failed">Restore failed: %s</string>
+    <string name="settings_auto_backup">Auto Backup</string>
+    <string name="settings_auto_backup_summary">Automatically backup once a day</string>
+    <string name="settings_backup_now">Backup Now</string>
+    <string name="settings_backup_password">Backup Password</string>
+    <string name="settings_backup_password_hint">Enter backup password</string>
+    <string name="settings_delete_remote_backup">Delete Cloud Backup</string>
+    <string name="settings_encrypt_backup">Encrypt Backup</string>
+    <string name="settings_encrypt_backup_summary">Encrypt backup file with password</string>
+    <string name="settings_launcher_icon">Launcher Icon</string>
+    <string name="settings_restore_backup">Restore Backup</string>
+    <string name="settings_show_disable_all_modules">Show \"Disable All Modules\" Button</string>
+    <string name="settings_show_disable_all_modules_summary">Show a button to disable all modules at once on the module page</string>
+    <string name="settings_test_webdav">Test WebDAV Connection</string>
+    <string name="settings_webdav_password">WebDAV Password</string>
+    <string name="settings_webdav_url">WebDAV URL</string>
+    <string name="settings_webdav_username">WebDAV Username</string>
+    <string name="theme_download">Download</string>
+    <string name="theme_install">Install</string>
+    <string name="theme_install_failed">Install failed</string>
+    <string name="theme_install_success">Install successful</string>
 </resources>
